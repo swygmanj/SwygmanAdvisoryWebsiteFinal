@@ -5,6 +5,7 @@
 	Spectral by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
 */
 
 html, body, div, span, applet, object,
@@ -3583,7 +3584,44 @@ input, select, textarea {
 		position: relative;
 		text-align: center;
 	}
+	/* Image above the title */
+#banner .title-image {
+  display: block;
+  position: relative;   /* keeps it above the #banner:after overlay */
+  z-index: 1;
+  max-width: 180px;     /* feel free to tweak */
+  width: 40vw;
+  height: auto;
+  margin: 0 auto 1rem;  /* centers image and adds space above title */
 
+  /* Match your h2 entrance animation */
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  -moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+  -ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Preload state to mirror your h2 behavior */
+body.is-preload #banner .title-image {
+  -moz-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+/* Mobile tweaks to keep it tidy */
+@media screen and (max-width: 736px) {
+  #banner .title-image {
+    max-width: 120px;
+    margin-bottom: 0.75rem;
+  }
+}
 		#banner h2 {
 			-moz-transform: scale(1);
 			-webkit-transform: scale(1);
