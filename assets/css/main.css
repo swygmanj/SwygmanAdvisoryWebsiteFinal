@@ -2981,7 +2981,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #505393;
+			background-color: #3F80D9;
 			color: #d3d4e4;
 		}
 
@@ -4035,6 +4035,7 @@ body.is-preload #banner .title-image {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
 
 
 
