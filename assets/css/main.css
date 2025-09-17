@@ -2079,15 +2079,15 @@ input, select, textarea {
 			}
 
 		.icon.style1 {
-			color: #00ffcc;
+			color: #ffffff;
 		}
 
 		.icon.style2 {
-			color: #00f0ff;
+			color: #ffffff;
 		}
 
 		.icon.style3 {
-			color: #76ddff;
+			color: #ffffff;
 		}
 
 /* Image */
@@ -4035,6 +4035,7 @@ body.is-preload #banner .title-image {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
 
 
 
