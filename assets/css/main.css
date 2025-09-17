@@ -4047,7 +4047,7 @@ body.is-preload #banner .title-image {
 
 	#mainlocationdawsonville > header {
 		padding: 12em 0 10em 0 ;
-		background-image: <img src="amicalola.png">;
+		background-image: url("amicalola.png");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -4111,6 +4111,7 @@ body.is-preload #banner .title-image {
 	body.is-mobile #mainlocationdawsonville > header {
 		background-attachment: scroll;
 	}
+
 
 
 
