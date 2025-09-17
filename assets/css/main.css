@@ -4112,6 +4112,74 @@ body.is-preload #banner .title-image {
 		background-attachment: scroll;
 	}
 
+/* Main Location Cumming*/
+
+	#mainlocationcumming > header {
+		padding: 12em 0 10em 0 ;
+		background-image: url("../../images/cumming.png");
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align: center;
+	}
+
+		#mainlocationcumming > header h2 {
+			font-size: 1.75em;
+			margin: 0 0 0.5em 0;
+		}
+
+		#mainlocationcumming > header p {
+			color: inherit;
+			letter-spacing: 0.225em;
+			text-transform: uppercase;
+			top: 0;
+		}
+
+			#mainlocationcumming > header p a {
+				color: inherit;
+			}
+
+		@media screen and (max-width: 1680px) {
+
+			#mainlocationcumming > header {
+				padding: 10em 0 8em 0 ;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			#mainlocationcumming > header {
+				padding: 8em 3em 6em 3em ;
+			}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			#mainlocationcumming > header {
+				padding: 10em 3em 8em 3em ;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#mainlocationcumming > header {
+				padding: 5em 3em 3em 3em ;
+			}
+
+				#mainlocationcumming > header h2 {
+					font-size: 1.25em;
+					margin: 0 0 1em 0;
+				}
+
+		}
+
+	body.is-mobile #mainlocationcumming > header {
+		background-attachment: scroll;
+	}
 
 
 
