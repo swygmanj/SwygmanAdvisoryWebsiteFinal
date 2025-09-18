@@ -2786,51 +2786,44 @@ input, select, textarea {
 
 		}
 
-ChatGPT said:
-
-Got it 👍 — if you’d like the images to stay perfect squares, take up less width in each row, and remain uncropped, we can fix the image containers with equal width/height and let the text (.content) use the rest of the space.
-
-Here’s the rewritten CSS:
-
-/* Square images that don't dominate the row */
+/* Square images that scale with viewport */
 .spotlight .image {
-  width: 180px;             /* fixed square width */
-  height: 180px;            /* same height for a square */
-  flex-shrink: 0;           /* prevents shrinking below square size */
+  flex: 0 0 20vw;          /* square scales with viewport width (20% of viewport) */
+  aspect-ratio: 1 / 1;     /* always square */
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;         /* background behind letterboxed images */
-  margin-right: 1.5em;      /* space between image and content */
+  background: #fff;        /* background behind letterboxed images */
+  margin-right: 1.5em;     /* spacing to content */
 }
 
 .spotlight .image img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;      /* no cropping, whole image fits */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;     /* no cropping */
 }
 
 /* Content fills remaining row width */
 .spotlight .content {
-  flex: 1;                  /* take remaining width */
-  padding: 1em 2em 0.5em 0; /* smaller padding */
+  flex: 1;
+  padding: 1em 2em 0.5em 0;
 }
 
 /* Tablet */
 @media screen and (max-width: 1280px) {
   .spotlight .image {
-    width: 150px;
-    height: 150px;
+    flex: 0 0 25vw;        /* slightly bigger squares on medium screens */
   }
 }
 
-/* Stack layout */
+/* Stack layout (mobile) */
 @media screen and (max-width: 980px) {
   .spotlight {
     display: block;
   }
   .spotlight .image {
-    margin: 0 auto 1em auto; /* center image on small screens */
+    margin: 0 auto 1em auto;   /* center the square */
+    flex: 0 0 40vw;            /* image takes ~40% of viewport width */
   }
   .spotlight .content {
     padding: 1em 1.5em;
@@ -2838,11 +2831,10 @@ Here’s the rewritten CSS:
   }
 }
 
-/* Mobile */
+/* Small mobile */
 @media screen and (max-width: 736px) {
   .spotlight .image {
-    width: 120px;
-    height: 120px;
+    flex: 0 0 60vw;        /* larger square on small screens */
   }
   .spotlight .content {
     padding: 0.75em 1em;
@@ -4321,6 +4313,7 @@ body.is-preload #banner .title-image {
 	body.is-mobile #mainlocationdahlonega > header {
 		background-attachment: scroll;
 	}
+
 
 
 
