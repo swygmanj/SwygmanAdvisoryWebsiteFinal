@@ -4116,7 +4116,10 @@ body.is-preload #banner .title-image {
 
 	#mainlocationcumming > header {
 		padding: 12em 0 10em 0 ;
-		background-image: url("../../images/cumming.png");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/cumming.png");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/cumming.png");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/cumming.png");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/cumming.png");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -4180,6 +4183,7 @@ body.is-preload #banner .title-image {
 	body.is-mobile #mainlocationcumming > header {
 		background-attachment: scroll;
 	}
+
 
 
 
