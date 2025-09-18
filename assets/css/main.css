@@ -2786,41 +2786,67 @@ input, select, textarea {
 
 		}
 
-/* Uniform row height without cropping */
+ChatGPT said:
+
+Got it 👍 — if you’d like the images to stay perfect squares, take up less width in each row, and remain uncropped, we can fix the image containers with equal width/height and let the text (.content) use the rest of the space.
+
+Here’s the rewritten CSS:
+
+/* Square images that don't dominate the row */
 .spotlight .image {
-  height: 220px;          /* fixed uniform height for rows */
-  display: flex;          /* center the img inside */
+  width: 180px;             /* fixed square width */
+  height: 180px;            /* same height for a square */
+  flex-shrink: 0;           /* prevents shrinking below square size */
+  display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;       /* fill background if aspect ratio leaves space */
+  background: #fff;         /* background behind letterboxed images */
+  margin-right: 1.5em;      /* space between image and content */
 }
 
 .spotlight .image img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;    /* ensures no cropping */
+  object-fit: contain;      /* no cropping, whole image fits */
 }
 
-/* Reduce padding for shorter rows */
+/* Content fills remaining row width */
 .spotlight .content {
-  padding: 1.25em 2em 0.5em 2em;
+  flex: 1;                  /* take remaining width */
+  padding: 1em 2em 0.5em 0; /* smaller padding */
 }
 
 /* Tablet */
 @media screen and (max-width: 1280px) {
-  .spotlight .image { height: 200px; }
+  .spotlight .image {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 /* Stack layout */
 @media screen and (max-width: 980px) {
-  .spotlight .image { height: 180px; }
-  .spotlight .content { padding: 1.25em 1.5em 0.5em 1.5em; }
+  .spotlight {
+    display: block;
+  }
+  .spotlight .image {
+    margin: 0 auto 1em auto; /* center image on small screens */
+  }
+  .spotlight .content {
+    padding: 1em 1.5em;
+    text-align: center;
+  }
 }
 
 /* Mobile */
 @media screen and (max-width: 736px) {
-  .spotlight .image { height: 150px; }
-  .spotlight .content { padding: 1em 1.25em 0.5em 1.25em; }
+  .spotlight .image {
+    width: 120px;
+    height: 120px;
+  }
+  .spotlight .content {
+    padding: 0.75em 1em;
+  }
 }
 
 /* Wrapper */
@@ -4295,6 +4321,7 @@ body.is-preload #banner .title-image {
 	body.is-mobile #mainlocationdahlonega > header {
 		background-attachment: scroll;
 	}
+
 
 
 
