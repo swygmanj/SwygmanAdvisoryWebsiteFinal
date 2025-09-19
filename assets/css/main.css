@@ -4314,6 +4314,61 @@ body.is-preload #banner .title-image {
 		background-attachment: scroll;
 	}
 
+/* Submenu container */
+#menu .has-submenu {
+  position: relative;
+}
+
+/* Hide submenu by default */
+#menu .submenu {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Show submenu when toggled (mobile / click) */
+#menu .has-submenu.open > .submenu {
+  display: block;
+}
+
+/* Rotate caret when submenu is open */
+#menu .has-submenu.open > .submenu-toggle .caret {
+  display: inline-block;
+  transform: rotate(180deg);
+  transition: transform 150ms ease;
+}
+
+/* Submenu links styling */
+#menu .submenu li a {
+  display: block;
+  padding: 0.5em 0.75em 0.5em 1.5em; /* indent child links */
+  text-decoration: none;
+}
+
+/* Desktop hover dropdown */
+@media (hover: hover) {
+  #menu .has-submenu:hover > .submenu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: #3F80D9;         /* adjust to match your theme */
+    border: 1px solid #ddd;   /* adjust/remove if not needed */
+    z-index: 999;
+    padding: 0.25em 0;
+  }
+
+  #menu .submenu li a {
+    padding: 0.5em 0.75em;
+    white-space: nowrap;
+  }
+
+  #menu .submenu li a:hover {
+    background: #3F80D9;      /* adjust to match your theme */
+  }
+}
 
 
 
