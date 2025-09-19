@@ -23,19 +23,30 @@
 						<nav id="nav">
 							<ul>
 								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="about.html">About Us</a></li>
-											<li><a href="pricing.html">Pricing</a></li>
-											<li><a href="locations.html">Locations</a></li>
-											<li><a href="elementstemplate.html">Elements</a></li>
-											<li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>
-										</ul>
-									</div>
-								</li>
+  <a href="#menu" class="menuToggle"><span>Menu</span></a>
+  <div id="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="locations.html">Locations</a></li>
+
+      <!-- New Services submenu -->
+      <li class="has-submenu">
+        <a href="#" class="submenu-toggle">Services <span class="caret">▾</span></a>
+        <ul class="submenu">
+          <li><a href="service1.html">Service 1</a></li>
+          <li><a href="service2.html">Service 2</a></li>
+          <li><a href="service3.html">Service 3</a></li>
+        </ul>
+      </li>
+
+      <li><a href="elementstemplate.html">Elements</a></li>
+      <li><a href="#">Sign Up</a></li>
+      <li><a href="#">Log In</a></li>
+    </ul>
+  </div>
+</li>
 							</ul>
 						</nav>
 					</header>
@@ -173,10 +184,30 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggles = document.querySelectorAll("#menu .submenu-toggle");
 
+  toggles.forEach(toggle => {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault(); // stop page jump
+      const parent = this.closest(".has-submenu");
+
+      // Optional: close other open submenus
+      document.querySelectorAll("#menu .has-submenu.open").forEach(item => {
+        if (item !== parent) item.classList.remove("open");
+      });
+
+      parent.classList.toggle("open");
+    });
+  });
+});
+</script>
+							
 	</body>
 
 </html>
+
 
 
 
