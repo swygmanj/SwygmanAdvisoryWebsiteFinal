@@ -3514,6 +3514,13 @@ input, select, textarea {
   display: block;
   height: inherit;
   line-height: inherit;
+
+ /* typographic match for “logo look” */
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.225em;  /* same spacing vibe as theme */
+  text-decoration: none;
 }
 
 /* Match the h1 a mobile font scaling */
@@ -3521,6 +3528,12 @@ input, select, textarea {
   #header .site-logo a {
     font-size: 0.8em;
   }
+}
+
+/* Mirror Spectral's .alt behavior that faded #header h1 */
+#header.alt .site-logo {
+  pointer-events: none;
+  opacity: 0;
 }
 
 	#header {
@@ -4396,6 +4409,7 @@ body.is-preload #banner .title-image {
     background: #3F80D9;      /* adjust to match your theme */
   }
 }
+
 
 
 
