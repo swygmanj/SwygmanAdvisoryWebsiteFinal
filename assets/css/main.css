@@ -3497,7 +3497,30 @@ input, select, textarea {
 /* Header */
 
 #header .site-logo {
-  padding-left: 1.5rem;
+  -moz-transition: opacity 0.2s ease;
+  -webkit-transition: opacity 0.2s ease;
+  -ms-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  height: inherit;
+  left: 1.25em;         /* same inset as h1 */
+  line-height: inherit;
+  position: absolute;
+  top: 0;
+}
+
+/* Make the link fill the header height like the old h1 a */
+#header .site-logo a {
+  border: 0;
+  display: block;
+  height: inherit;
+  line-height: inherit;
+}
+
+/* Match the h1 a mobile font scaling */
+@media screen and (max-width: 736px) {
+  #header .site-logo a {
+    font-size: 0.8em;
+  }
 }
 
 	#header {
@@ -4373,6 +4396,7 @@ body.is-preload #banner .title-image {
     background: #3F80D9;      /* adjust to match your theme */
   }
 }
+
 
 
 
