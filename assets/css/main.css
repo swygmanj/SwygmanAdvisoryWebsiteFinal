@@ -3496,6 +3496,10 @@ input, select, textarea {
 
 /* Header */
 
+#header .site-logo {
+  padding-left: 1.5rem;
+}
+
 	#header {
 		-moz-transition: background-color 0.2s ease;
 		-webkit-transition: background-color 0.2s ease;
@@ -4369,6 +4373,7 @@ body.is-preload #banner .title-image {
     background: #3F80D9;      /* adjust to match your theme */
   }
 }
+
 
 
 
