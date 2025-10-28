@@ -3533,7 +3533,7 @@ input, select, textarea {
 /* Mirror Spectral's .alt behavior that faded #header h1 */
 #header.alt .site-logo {
   pointer-events: none;
-  opacity: 0;
+  opacity: 1;
 }
 
 	#header {
@@ -4409,6 +4409,7 @@ body.is-preload #banner .title-image {
     background: #3F80D9;      /* adjust to match your theme */
   }
 }
+
 
 
 
